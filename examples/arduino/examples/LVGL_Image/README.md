@@ -4,23 +4,23 @@
 
 ## What It Does
 
-Displays LVGL image content loaded from a MicroSD card.
+Displays PNG images from a microSD card on the LCD.
 
 ## Hardware Required
 
 - ESP32-C6-LCD-1.47 development board
-- MicroSD card with the required image resources
+- MicroSD card
 
 ## How to Run
 
-1. Install Arduino-ESP32 `3.0.7`.
-2. Copy the resources from the original SD Card File folder to a MicroSD card.
-3. Open `LVGL_Image.ino`, select `ESP32C6 Dev Module`, and upload.
+1. Install Arduino-ESP32 `3.0.7` and set the Arduino IDE sketchbook location to [`examples/arduino/`](../../) to use the bundled libraries.
+2. Copy the PNG files from [`sd-card/`](sd-card/) directly to the microSD card root, then insert the card into the board.
+3. Open [`LVGL_Image.ino`](LVGL_Image.ino), select `ESP32C6 Dev Module`, and upload.
 
 ## Expected Result
 
-The display shows the image content read from the MicroSD card.
+The LCD cycles through the PNG images on the card.
 
 ## Troubleshooting
 
-The required SD card resources must be present before upload and testing.
+If no images appear, check that the card is detected and that the `.png` files are in its root directory.
